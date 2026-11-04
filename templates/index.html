@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Productivity Prediction</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>Employee Productivity Prediction</h1>
+
+        <p class="subtitle">
+            Enter Employee Details
+        </p>
+
+        <form action="/predict" method="POST">
+
+            <div class="form-grid">
+
+                <div class="input-group">
+                    <label>Working Hours</label>
+                    <input type="number"
+                           name="working_hours"
+                           placeholder="Example: 8"
+                           required>
+                </div>
+
+                <div class="input-group">
+                    <label>Attendance (%)</label>
+                    <input type="number"
+                           name="attendance"
+                           placeholder="Example: 95"
+                           required>
+                </div>
+
+                <div class="input-group">
+                    <label>Tasks Completed</label>
+                    <input type="number"
+                           name="tasks_completed"
+                           placeholder="Example: 12"
+                           required>
+                </div>
+
+                <div class="input-group">
+                    <label>Experience (Years)</label>
+                    <input type="number"
+                           name="experience"
+                           placeholder="Example: 3"
+                           required>
+                </div>
+
+                <div class="input-group">
+                    <label>Overtime Hours</label>
+                    <input type="number"
+                           name="overtime"
+                           placeholder="Example: 2"
+                           required>
+                </div>
+
+                <div class="input-group">
+                    <label>Leave Days</label>
+                    <input type="number"
+                           name="leave_days"
+                           placeholder="Example: 2"
+                           required>
+                </div>
+
+                <div class="input-group">
+                    <label>Job Satisfaction (1-10)</label>
+                    <input type="number"
+                           name="satisfaction"
+                           min="1"
+                           max="10"
+                           placeholder="Example: 8"
+                           required>
+                </div>
+
+                <div class="input-group">
+                    <label>Previous Performance (%)</label>
+                    <input type="number"
+                           name="previous_performance"
+                           placeholder="Example: 85"
+                           required>
+                </div>
+
+            </div>
+
+            <button type="submit">
+                PREDICT PRODUCTIVITY
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
